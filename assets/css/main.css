@@ -45,10 +45,16 @@ body {
   transition: top 1s ease;
 }
 
-::-webkit-input-placeholder,
-         ::-moz-placeholder,          
-          :-moz-placeholder,          
-     :-ms-input-placeholder {
+::-webkit-input-placeholder {
+  color:rgba(0,0,0, 0.15);  
+}
+::-moz-placeholder {
+  color:rgba(0,0,0, 0.15);         
+}          
+:-moz-placeholder {
+  color:rgba(0,0,0, 0.15);
+}          
+:-ms-input-placeholder {
   color:rgba(0,0,0, 0.15);
 }
 

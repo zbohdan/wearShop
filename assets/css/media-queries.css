@@ -1117,10 +1117,16 @@
     grid-template-rows: repeat(8, 25vw);
   } 
 
-  ::-webkit-input-placeholder,
-           ::-moz-placeholder,          
-            :-moz-placeholder,          
-       :-ms-input-placeholder {
+  ::-webkit-input-placeholder {
+    color:rgba(255, 255, 255, 0.8);  
+  }
+  ::-moz-placeholder {
+    color:rgba(255, 255, 255, 0.8);         
+  }          
+  :-moz-placeholder {
+    color:rgba(255, 255, 255, 0.8);
+  }          
+  :-ms-input-placeholder {
     color:rgba(255, 255, 255, 0.8);
   }
 }
@@ -1562,10 +1568,16 @@
     grid-template-rows: repeat(8, 25vw);
   } 
 
-  ::-webkit-input-placeholder,
-           ::-moz-placeholder,          
-            :-moz-placeholder,          
-       :-ms-input-placeholder {
+  ::-webkit-input-placeholder {
+    color:rgba(255, 255, 255, 0.8);  
+  }
+  ::-moz-placeholder {
+    color:rgba(255, 255, 255, 0.8);         
+  }          
+  :-moz-placeholder {
+    color:rgba(255, 255, 255, 0.8);
+  }          
+  :-ms-input-placeholder {
     color:rgba(255, 255, 255, 0.8);
   }
 }
