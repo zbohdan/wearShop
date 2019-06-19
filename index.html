@@ -795,10 +795,8 @@
 
     dispatchEvent(new Event("resize"));
 
-    function res() { 
-      document.write(screen.width + ', ' + screen.height); 
-    }
-    res();
+    let hdr = document.querySelector(".tagline-header > h1");
+    hdr.textContent = `Width: ${screen.width}, height: ${screen.height}`;
 
   </script>
 </body>
