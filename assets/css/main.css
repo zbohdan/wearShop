@@ -489,27 +489,27 @@ a.basket-btn:hover {
                        PROMO SECTION                        
 ------------------------------------------------------------- */
 
-.promo-ad {
+.promo-ad-wrap {
   grid-row: 8/10;
   grid-column: 2/3;
   z-index: 0; 
   display: flex;
 }
 
-.promo-ad > div {
+.promo-ad-wrap > div {
   flex: 1;
   position: relative;
 }
 
-.promo-ad > div:first-child {
+.promo-ad-wrap > div:first-child {
   background: url(../images/clocks.jpg);
 }
 
-.promo-ad > div:last-child {
+.promo-ad-wrap > div:last-child {
   background: url(../images/snickers-nike.jpg);
 }  
 
-.promo-ad h3 {
+.promo-ad-wrap h3 {
   width: 220px;
   padding: 49px 0 0 39px;
   font-weight: 600;
@@ -518,7 +518,7 @@ a.basket-btn:hover {
   color: white;
 }
 
-.promo-ad > div:last-child h3 {
+.promo-ad-wrap > div:last-child h3 {
   color: rgba(255,255,255, 0.89);
 }
 

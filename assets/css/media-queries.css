@@ -37,15 +37,15 @@
                          PROMO SECTION                        
 ------------------------------------------------------------- */
 
-  .promo-ad {
+  .promo-ad-wrap {
     justify-content: center;
   }
 
-  .promo-ad div:first-child {
+  .promo-ad-wrap div:first-child {
     max-width: 590px;
   }
 
-  .promo-ad div:last-child {
+  .promo-ad-wrap div:last-child {
     max-width: 590px; 
   }
 
@@ -115,15 +115,15 @@
                          PROMO SECTION                        
   ------------------------------------------------------------- */
 
-  .promo-ad {
+  .promo-ad-wrap {
     justify-content: center;
   }
 
-  .promo-ad div:first-child {
+  .promo-ad-wrap div:first-child {
     max-width: 590px;
 
   }  
-  .promo-ad div:last-child {
+  .promo-ad-wrap div:last-child {
     max-width: 590px; 
   }
 
@@ -428,16 +428,15 @@
                         PROMO SECTION                        
 ------------------------------------------------------------- */
 
-  .promo-ad {
+  .promo-ad-wrap {
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  .promo-ad > div {
+  .promo-ad-wrap > div {
     flex: initial;
     height: 400px;
     width: 590px;
-    min-width: 480px;
   }
 
 /* -------------------------------------------------------------
@@ -696,17 +695,16 @@
                         PROMO SECTION                        
  ------------------------------------------------------------- */
 
-   .promo-ad {
-     justify-content: center;
-     flex-wrap: wrap;
-   }
+  .promo-ad-wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-   .promo-ad > div {
-     flex: initial;
-     height: 400px;
-     width: 590px;
-     min-width: 480px;
-   }  
+  .promo-ad-wrap > div {
+    flex: initial;
+    height: 400px;
+    width: 590px;
+  }   
 }
 
 /* 
@@ -1080,19 +1078,21 @@
                          PROMO SECTION                        
   ------------------------------------------------------------- */
 
-  .promo-ad {
-    justify-content: center;
+  .promo-ad-wrap {
     flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .promo-ad > div {
+  .promo-ad-wrap > div {
     flex: initial;
     height: 300px;
-    min-width: 480px;
-    background-size: 100% auto !important;
+    width: 100%;
+    max-width: 442.5px;
+    background-repeat: no-repeat !important;
+    background-size: auto 100% !important;
   } 
 
-  .promo-ad h3 {
+  .promo-ad-wrap h3 {
     width: 170px;
     font-size: 37px;
   }
@@ -1103,7 +1103,7 @@
 
   .menu-of-ad span {
     font-size: 10px;
-  } 
+  }
 
   /* -------------------------------------------------------------
                           BLOG SECTION                      
@@ -1525,17 +1525,20 @@
                          PROMO SECTION                        
 ------------------------------------------------------------- */
 
-  .promo-ad {
+  .promo-ad-wrap {
     flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .promo-ad > div {
+  .promo-ad-wrap > div {
     flex: initial;
     height: 300px;
-    min-width: 480px;
-    background-size: 100% auto !important;
+    width: 100%;
+    max-width: 442.5px;
+    background-repeat: no-repeat !important;
+    background-size: auto 100% !important;
   } 
-  .promo-ad h3 {
+  .promo-ad-wrap h3 {
     width: 170px;
     font-size: 37px;
   }
