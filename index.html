@@ -795,7 +795,9 @@
 
     dispatchEvent(new Event("resize"));
 
-    function res => document.write(screen.width + ', ' + screen.height); 
+    function res() { 
+      document.write(screen.width + ', ' + screen.height); 
+    }
     res();
 
   </script>
