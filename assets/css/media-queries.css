@@ -598,14 +598,14 @@
     outline:none;
   }
 
-  .search-btn:hover span {
+/*  .search-btn:hover span {
    background-color: #f60 !important;
   }
 
   .search-btn:hover img {
     opacity: 1 !important;
     filter: invert(1) !important;
-  }
+  }*/
 
   .container-search {
     grid-row: 2/19;
