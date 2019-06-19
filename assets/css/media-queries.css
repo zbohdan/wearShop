@@ -1157,7 +1157,7 @@
     width: 100%;
   }
 
-  .main-grid-container{
+  .main-grid-container {
     grid-template-columns: 1fr 100% 1fr;
     grid-template-rows: 42px 20px 85px 60px 30px 75px 50px 40px 560px 149px 30px 82px 200vw 195px 200px 250px 70px 111px;
   }
@@ -1168,7 +1168,7 @@
 
 /* HEADER STRIP TOP*/ 
 
-  .strip-topб
+  .strip-top,
   .content-strip-top {
     position: -webkit-sticky;
     position: sticky;
