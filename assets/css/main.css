@@ -343,7 +343,9 @@ a.basket-btn:hover {
 .puma-logo {
   grid-column: 2/3;
   grid-row: 3/4;
-  place-self: end center;
+  /*place-self: end center;*/
+  align-self: end;
+  justify-self: center;
   z-index: 3;
   box-sizing: border-box;
   padding-bottom: 28px;
@@ -354,7 +356,9 @@ a.basket-btn:hover {
 .tagline-header { 
   grid-row: 4/5;
   grid-column: 2/3;
-  place-self: end center;
+  /*place-self: end center;*/
+  align-self: end;
+  justify-self: center;
   z-index: 3;
 }
 
@@ -388,7 +392,9 @@ a.basket-btn:hover {
 .sub-discription {  
   grid-row: 5/6;
   grid-column: 2/3;
-  place-self: center;
+  /*place-self: center;*/
+  align-self: center;
+  justify-self: center;
   z-index: 3;
 }
 
@@ -402,7 +408,9 @@ a.basket-btn:hover {
 .find-out {
   grid-row: 6/7;
   grid-column: 2/3;
-  place-self: end center;
+  /*place-self: end center;*/
+  align-self: end;
+  justify-self: center;
   z-index: 3;
   display: flex;
   align-items: center;
@@ -428,7 +436,9 @@ a.basket-btn:hover {
 .bg-changer {
   grid-row: 7/8;
   grid-column: 2/3;
-  place-self: end center;
+  /*place-self: end center;*/
+  align-self: end;
+  justify-self: center;
   z-index: 0;
   display: flex;
   align-items: center;
@@ -545,7 +555,9 @@ a.basket-btn:hover {
 .blog-title {
   grid-row: 10/11;
   grid-column: 2/3;
-  place-self: flex-end center;
+  /*place-self: end center;*/
+  align-self: end;
+  justify-self: center;
 }
 
 .blog-title > h3 {
@@ -559,7 +571,9 @@ a.basket-btn:hover {
 .blog-content {
   grid-row: 11/12;
   grid-column: 2/3;
-  place-self: center;
+  /*place-self: center;*/
+  align-self: center;
+  justify-self: center;
 }
 
 .blog-content > h4 {
@@ -723,7 +737,9 @@ main {
 .read-more {
   grid-row: 14/15;
   grid-column: 2/3;
-  place-self: center;
+  /*place-self: center;*/
+  align-self: center;
+  justify-self: center;
   padding: 17px 50px;
   margin-bottom: 2px;
   border: 2px solid rgba(0,0,0, 0.3);
@@ -779,7 +795,9 @@ main {
 .rhomb {
   grid-row: 16/17;
   grid-column: 2/3;
-  place-self: start center;
+  /*place-self: start center;*/
+  align-self: start;
+  justify-self: center;
   transform: translate(0, -50%);
 }
 .footer-bg {
@@ -848,7 +866,9 @@ main {
 .copyright {
   grid-row: 18/19;
   grid-column: 2/3;
-  place-self: start center;
+  /*place-self: start center;*/
+  align-self: start;
+  justify-self: center;
   padding-top: 49px;
   font-weight: 400;
   font-size: 10px;
