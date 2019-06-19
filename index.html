@@ -399,7 +399,7 @@
           if (inputCheckBoxSearch.checked) {
             setSpanStyle();
             setTimeout(e => {
-              searchSpan.style.backgroundColor = "#f60"
+              searchSpan.style.backgroundColor = "green"
               searchIcon.style.opacity = "1";
               searchIcon.style.filter = "invert(1)";
               inputTextSearch.style.transition = "top 1s ease, left 0.5s ease, width 0.5s ease";
@@ -434,10 +434,11 @@
 
               timerId5 = setTimeout(() => {
                 searchSpan.style.top = "auto";
-                searchSpan.style.backgroundColor = "white"
+                searchSpan.style.backgroundColor = "red"
                 searchIcon.style.opacity = "0.7";
                 searchIcon.style.filter = "invert(0)";
               }, 1000);
+
             }, timeToBack);
           }
           break;
@@ -499,7 +500,7 @@
       }
     });
 
-
+    
     // --------------------------------------------
     //            RESIZE FUNCTIONS
     // --------------------------------------------
