@@ -145,15 +145,18 @@
   ##Screen = B/w 481px to 767px
 */
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait),
+       only screen and (min-device-width: 481px) and (max-device-width: 767px) and (orientation: portrait) {
+
 /* -------------------------------------------------------------
                           CONTAINERS                               
 ------------------------------------------------------------- */
+
   .container {
     width: 100%;
   }
 
-  .main-grid-container{
+  .main-grid-container {
     grid-template-columns: 1fr 100% 1fr;
     grid-template-rows: 42px 70px 110px 150px 28px 100px 120px 40px 760px 110px 30px 72px 200vw 195px 200px 179px 90px 211px;
   }
