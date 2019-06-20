@@ -1447,7 +1447,7 @@
     padding-left: 0;
     border: 1px solid #ff6600;
     border-left: none;
-    border-radius: 0;
+    border-radius: 0 !important;
     text-align: center;
     font: 400 14px Montserrat;
     letter-spacing: -0.062em;

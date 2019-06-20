@@ -739,7 +739,7 @@
 
 
 
-              arrowLeft.setAttribute("src", "assets/images/arrow-left-5.png");
+              arrowLeft.setAttribute("src", "assets/images/arrow-left.png");
               arrowLeft.style.height = "40px";
               arrowLeft.style.width = "40px"
               arrowLeft.style.filter = "invert(1)";
@@ -752,13 +752,8 @@
                 inputCheckBoxSearch.dispatchEvent(new Event("change"));
               });
             }
-            // divNavLogos.style.flexGrow = "1";
-            // searchSpan.style.transform = "translate(18px)";
           } else {
-            // searchBtn.style.marginRight = "0";
-            // divNavLogos.style.flexGrow = "0";
             if (document.querySelector("img[src*='arrow-lef']")) document.querySelector("img[src*='arrow-lef']").parentNode.remove();
-            // searchSpan.style.transform = "translate(0)";
           }
           break;
       }
