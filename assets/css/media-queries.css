@@ -979,7 +979,6 @@
     max-height: 77px;
     width: initial;
     max-width: 77px;
-    border-radius: 50%;
     background-color: initial;
     outline: none;
   }
@@ -1421,10 +1420,9 @@
     max-height: 77px;
     width: initial;
     max-width: 77px;
-    border-radius: 50%;
     background-color: initial;
     transform: translate(0) !important;
-    outline:none;
+    outline: none;
   }
 
   .container-search {
