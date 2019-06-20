@@ -169,8 +169,7 @@
 
   .strip-top,
   .content-strip-top {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     left: 0;
     top: 0;
   }
@@ -187,15 +186,13 @@
 
   .strip-nav,
   .content-nav {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 42px;
     left: 0;
   }
 
   .logo-header {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     left: 0;
     top: 0;
   }
@@ -488,8 +485,7 @@
 
   .strip-top,
   .content-strip-top {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
   }
@@ -508,8 +504,7 @@
 
   .strip-nav {
     grid-column: 1/2;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
@@ -517,16 +512,14 @@
 
   .logo-header {
     grid-column: 1/2;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     left: 0;
     top: 0;
   }
 
   .content-nav {
     grid-column: 1/2;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 112px;
     left: 0;
     flex-direction: column;
@@ -614,8 +607,7 @@
   }
 
   .input-search {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 52px;
     left: 180px;
     z-index: 4;
@@ -745,8 +737,7 @@
 
   .strip-top,
   .content-strip-top {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     left: 0;
     top: 0;
   }
@@ -766,8 +757,7 @@
   .logo-header {
     grid-row: 1/2;
     grid-column: 2/3;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 83px;
@@ -869,7 +859,7 @@
 
   .nav-icon-1.open span:nth-child(4) {
   top: 18px;
-  left: ;eft: 6px;
+  left: 6px;
   }
 
   .nav-icon-1.open span:nth-child(6) {
@@ -897,8 +887,7 @@
 
   .content-nav {
     grid-column: 2/3;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 42px;
     left: 0;
     flex-direction: row;
@@ -1171,8 +1160,7 @@
 
   .strip-top,
   .content-strip-top {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     left: 0;
     top: 0;
   }
@@ -1197,8 +1185,7 @@
   .logo-header {
     grid-row: 1/2;
     grid-column: 2/3;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 83px;
@@ -1330,8 +1317,7 @@
 
   .content-nav {
     grid-column: 2/3;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 42px;
     left:0;
     flex-direction: row;
@@ -1429,16 +1415,13 @@
     grid-row: 1/19;
     grid-column: 2/3;
     position: static;
-    display: flex;
   }
 
   .input-search {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0 !important;
     left: 0 !important;;
     z-index: 7;
-    flex: 1;
     display: none;
     height: 42px;
     min-width: 100px;
