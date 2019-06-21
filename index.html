@@ -16,7 +16,7 @@
       <div class="container-search"><input type="search" placeholder="type to search" class="input-search"></div>
 
 <!-- ------------------------------------------------------------
-                  HEADER
+                       HEADER
 ------------------------------------------------------------ -->
 
       <!-- HEADER STRIP TOP -->
@@ -76,7 +76,7 @@
       </nav>
 
 <!-- ------------------------------------------------------------
-              SECTION WITH BACKGROUND
+                SECTION WITH BACKGROUND
 ------------------------------------------------------------ -->
     
       <div class="bg-header"></div>
@@ -113,7 +113,7 @@
       </div>
 
 <!-- ------------------------------------------------------------
-                PROMO SECTION
+                        PROMO SECTION
 ------------------------------------------------------------ -->
 
       <div class="promo-ad-wrap">
@@ -142,7 +142,7 @@
       </div>
 
 <!-- ------------------------------------------------------------
-                BLOG SECTION
+                       BLOG SECTION
 ------------------------------------------------------------ -->
 
       <div class="blog-title">
@@ -196,7 +196,7 @@
       <a href="#read-more" class="read-more">read more</a>
 
 <!-- ------------------------------------------------------------
-                  FOOTER
+                          FOOTER
 ------------------------------------------------------------ -->
       
       <!-- FOOTER WITH BRANDS -->
@@ -263,9 +263,7 @@
         case 6: return ((window.innerWidth >= 481) && (window.innerWidth <= 767) && window.innerWidth > window.innerHeight); 
         case 7: return ((window.innerWidth >= 320) && (window.innerWidth <= 480)); 
         default: { 
-          let keyCurrent;
           for(i = 0; i  <= 7; i++){
-            media(i);
             if (media(i)) break;
           }
           return i;
@@ -307,12 +305,10 @@
         changeBackground();
       });
     });
-  
 
     function changeBackground() {
       input.forEach(i => {
         if (i.checked == true) inputCheckedCurrent = [].indexOf.call(input, i);
-        
       });
       inputCheckedPrev = inputCheckedCurrent;
 
@@ -344,7 +340,7 @@
     let inputTextSearch = document.querySelector(".input-search");
 
     // VARIABLES & FUNCTIONS OF PARTICULAR MEDIA QUERIES
-    //media 4
+    // media 4
     let timerId3;
     let timerId4;
     let timerId5;
@@ -370,7 +366,7 @@
       if ((Math.abs(firstElemStyle - secondElemStyle)) < 0.5) return true;
       return false;
     }
-    //media 6
+    // media 6
     let spanDescribe = document.querySelector(".content-strip-top > span");
     let searchBtn = document.querySelector(".search-btn");
     let divNavLogos = document.querySelector(".content-nav > div:last-of-type");
@@ -502,7 +498,7 @@
 
     searchBtn.addEventListener("mouseover", (e) => {
       if ((media(0) || media(1) || media(2)) && !(inputCheckBoxSearch.checked))
-      inputTextSearch.style.top = "calc(-100% + 100px)";
+        inputTextSearch.style.top = "calc(-100% + 100px)";
       if (media(4) && !(inputCheckBoxSearch.checked)) {
         searchSpan.style.backgroundColor = "#f60";
         searchIcon.style.opacity = "1";
@@ -520,7 +516,43 @@
       }
     });
 
-    
+    // --------------------------------------------
+    //            STRIP-NAV MENU 
+    // --------------------------------------------
+
+    let containerMAIN = document.querySelector(".main-grid-container");
+    const icon = document.querySelector('.nav-icon-1');
+    let iconInput = document.querySelector(".nav-icon-1 input");
+
+    icon.addEventListener("change", e => {
+        if (iconInput.checked) {
+          icon.classList.toggle("open");
+          let menuNavCont = document.createElement("div");
+          let contentNavA = document.querySelectorAll(".content-nav > a");
+
+          menuNavCont.className = "menu-nav-container content-nav";
+          containerMAIN.appendChild(menuNavCont);
+          contentNavA.forEach(i => menuNavCont.appendChild(i.cloneNode(true)));
+        }
+        else {
+          let menuQuery = document.getElementsByClassName("menu-nav-container")[0];
+
+          icon.classList.toggle("open");
+          menuQuery.remove();
+        }
+    });
+
+    // --------------------------------------------
+    //            BASKET COUNTER 
+    // --------------------------------------------
+
+    let aBasket = document.querySelector(".basket-btn"); 
+    let counter = document.querySelector(".basket-btn > span")
+    aBasket.addEventListener("click", (e) => {
+      if (+counter.textContent == 9) counter.innerHTML = "-1";
+      counter.innerHTML = `${+(counter.textContent) + 1}`;
+    });
+
     // --------------------------------------------
     //            RESIZE FUNCTIONS
     // --------------------------------------------
@@ -651,160 +683,108 @@
       }
     }
 
-       class WanderingElement {
+    class WanderingElement {
 
-         constructor(el, [elTarget, targetWhere], [elStart, startWhere], mediaQ, plural) {
-           if (plural) this.el = document.querySelectorAll(el);
-           else this.el = document.querySelector(el);
-           this.elTarget = document.querySelector(elTarget);
-           this.targetWhere = targetWhere;
-           this.elStart = document.querySelector(elStart);
-           this.startWhere = startWhere;
-           this.mediaQ = mediaQ;
-           if (plural) this.holder = [];
-           else this.holder;
-           this.plural = plural;
-         }
+      constructor(el, [elTarget, targetWhere], [elStart, startWhere], mediaQ, plural) {
+        if (plural) {
+          this.el = document.querySelectorAll(el);
+          this.holder = [];
+        } else {
+          this.el = document.querySelector(el);
+          this.holder;
+        } 
 
-         changePos() {
-           if (!this.plural) {
-             if (eval(this.mediaQ)) {
-               this.holder = this.el.parentNode.removeChild(this.el);
+        this.elTarget = document.querySelector(elTarget);
+        this.targetWhere = targetWhere;
+        this.elStart = document.querySelector(elStart);
+        this.startWhere = startWhere;
+        this.mediaQ = mediaQ;
+        this.plural = plural;
+      }
 
-               switch (this.targetWhere) {
-                 case "before":
-                   this.elTarget.parentNode.insertBefore(this.holder, this.elTarget);
-                   break;
-                 case "after":
-                   this.elTarget.parentNode.insertBefore(this.holder, this.elTarget.nextSibling);
-                   break;
-                 case "last":
-                   this.elTarget.parentNode.appendChild(this.elTarget);
-                   break;
-               }
-             } else {
-               this.holder = this.el.parentNode.removeChild(this.el);
+      changePos() {
+        if (!this.plural) {
+          if (eval(this.mediaQ)) {
+            this.holder = this.el.parentNode.removeChild(this.el);
 
-               switch (this.startWhere) {
-                 case "first":
-                   this.elStart.insertBefore(this.holder, this.elStart.firstElementChild);
-                   break;
-                 case "second":
-                   this.elStart.insertBefore(this.holder, this.elStart.firstElementChild.nextElementSibling);
-                   break;
-                 case "last":
-                   this.elStart.appendChild(this.holder);
-                   break;
-               }
-             }
-           } else {
-             if (eval(this.mediaQ)) {
-               this.el.forEach(i => {
-                 this.holder.push(i.parentNode.removeChild(i));
-               });
+            switch (this.targetWhere) {
+              case "before":
+                this.elTarget.parentNode.insertBefore(this.holder, this.elTarget);
+                break;
+              case "after":
+                this.elTarget.parentNode.insertBefore(this.holder, this.elTarget.nextSibling);
+                break;
+              case "last":
+                this.elTarget.parentNode.appendChild(this.elTarget);
+                break;
+            }
+          } else {
+            this.holder = this.el.parentNode.removeChild(this.el);
 
-               switch (this.targetWhere) {
-                 case "before":
-                   this.holder.forEach(i => {
-                     this.elTarget.parentNode.insertBefore(i, this.elTarget);
-                   });
-                   break;
-                 case "after":
-                   this.holder.forEach(i => {
-                     this.elTarget.parentNode.insertBefore(i, this.elTarget.nextSibling);
-                   });
-                   break;
-                 case "last":
-                   this.holder.forEach(i => {
-                     this.elTarget.parentNode.appendChild(this.elTarget);
-                   });
-                   break;
-               }
-             } else {
-               this.el.forEach(i => {
-                 this.holder.push(i.parentNode.removeChild(i));
-               });
+            switch (this.startWhere) {
+              case "first":
+                this.elStart.insertBefore(this.holder, this.elStart.firstElementChild);
+                break;
+              case "second":
+                this.elStart.insertBefore(this.holder, this.elStart.firstElementChild.nextElementSibling);
+                break;
+              case "last":
+                this.elStart.appendChild(this.holder);
+                break;
+            }
+          }
+        } else {
+          if (eval(this.mediaQ)) {
+            this.el.forEach(i => this.holder.push(i.parentNode.removeChild(i)));
 
-               switch (this.startWhere) {
-                 case "first":
-                   this.holder.forEach(i => {
-                     this.elStart.insertBefore(i, this.elStart.firstElementChild);
-                   })
-                   break;
-                 case "second":
-                   this.holder.forEach(i => {
-                     this.elStart.insertBefore(i, this.elStart.firstElementChild.nextElementSibling);
-                   })
-                   break;
-                 case "last":
-                   this.elStart.appendChild(this.holder);
-                   this.holder.forEach(i => {
-                     this.elStart.appendChild(i);
-                   })
-                   break;
-               }
-             }
-           }
-         }
-       }
+            switch (this.targetWhere) {
+              case "before":
+                this.holder.forEach(i => this.elTarget.parentNode.insertBefore(i, this.elTarget));
+                break;
+              case "after":
+                this.holder.forEach(i => this.elTarget.parentNode.insertBefore(i, this.elTarget.nextSibling));
+                break;
+              case "last":
+                this.holder.forEach(i => this.elTarget.parentNode.appendChild(this.elTarget));
+                break;
+            }
+          } else {
+            this.el.forEach(i => this.holder.push(i.parentNode.removeChild(i)));
 
-       let navIcon = new WanderingElement(".nav-icon-1", [".content-strip-top > span", "after"], [".content-nav", "first"], "media(6) || media(7)");
-       let navLogos = new WanderingElement(".content-nav > div", [".content-strip-top > span", "after"], [".content-nav", "last"], "media(6) || media(7)");
-       let inputAct = new WanderingElement(".input-search", [".basket-btn", "before"], [".container-search", "last"], "media(3) || media(5) || media(6)");
-       let navItems = new WanderingElement(".content-strip-top > a", [".user-menu > div > a:last-of-type", "before"], [".content-strip-top", "second"], "media(6) || media(7) || media(5) & window.innerWidth <= 715", true);
-
-       window.onresize = function(event) {
-         keyPrev = keyCurrent;
-         keyCurrent = media();
-         navLogos.changePos();
-         navItems.changePos();
-         navIcon.changePos();
-         inputAct.changePos();
-         fixElementsStyle();
-         console.log(`keyCurrent = ${keyCurrent} keyPrevious = ${keyPrev}`);
-       }
-
-    // --------------------------------------------
-    //            STRIP-NAV MENU 
-    // --------------------------------------------
-
-    let containerMAIN = document.querySelector(".main-grid-container");
-    const icon = document.querySelector('.nav-icon-1');
-    let iconInput = document.querySelector(".nav-icon-1 input");
-
-    icon.addEventListener("change", e => {
-        if (iconInput.checked) {
-          icon.classList.toggle("open");
-          let menuNavCont = document.createElement("div");
-          let contentNavA = document.querySelectorAll(".content-nav > a");
-
-          menuNavCont.className = "menu-nav-container content-nav";
-          containerMAIN.appendChild(menuNavCont);
-          contentNavA.forEach(i => menuNavCont.appendChild(i.cloneNode(true)));
+            switch (this.startWhere) {
+              case "first":
+                this.holder.forEach(i => this.elStart.insertBefore(i, this.elStart.firstElementChild));
+                break;
+              case "second":
+                this.holder.forEach(i => this.elStart.insertBefore(i, this.elStart.firstElementChild.nextElementSibling));
+                break;
+              case "last":
+                this.elStart.appendChild(this.holder);
+                this.holder.forEach(i => this.elStart.appendChild(i));
+                break;
+            }
+          }
         }
-        else {
-          let menuQuery = document.getElementsByClassName("menu-nav-container")[0];
+      }
+    }
 
-          icon.classList.toggle("open");
-          menuQuery.remove();
-        }
-    });
+    let navIcon = new WanderingElement(".nav-icon-1", [".content-strip-top > span", "after"], [".content-nav", "first"], "media(6) || media(7)");
+    let navLogos = new WanderingElement(".content-nav > div", [".content-strip-top > span", "after"], [".content-nav", "last"], "media(6) || media(7)");
+    let inputAct = new WanderingElement(".input-search", [".basket-btn", "before"], [".container-search", "last"], "media(3) || media(5) || media(6)");
+    let navItems = new WanderingElement(".content-strip-top > a", [".user-menu > div > a:last-of-type", "before"], [".content-strip-top", "second"], "media(6) || media(7) || media(5) & window.innerWidth <= 715", true);
 
-    // --------------------------------------------
-    //            BASKET COUNTER 
-    // --------------------------------------------
-
-    let aBasket = document.querySelector(".basket-btn"); 
-    let counter = document.querySelector(".basket-btn > span")
-    aBasket.addEventListener("click", (e) => {
-      if (+counter.textContent == 9) counter.innerHTML = "-1";
-      counter.innerHTML = `${+(counter.textContent) + 1}`;
-    });
-
+    window.onresize = function(event) {
+      keyPrev = keyCurrent;
+      keyCurrent = media();
+      navLogos.changePos();
+      navItems.changePos();
+      navIcon.changePos();
+      inputAct.changePos();
+      fixElementsStyle();
+      console.log(`keyCurrent = ${keyCurrent} keyPrevious = ${keyPrev}`);
+    }
 
     dispatchEvent(new Event("resize"));
-
-
   </script>
 </body>
 </html>

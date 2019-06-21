@@ -62,7 +62,7 @@ body {
                         HEADER                               
 ------------------------------------------------------------- */
 
-/* HEADER STRIP TOP*/
+/* HEADER STRIP TOP */
 
 .strip-top {
   grid-column: 1/4;
@@ -343,7 +343,6 @@ a.basket-btn:hover {
 .puma-logo {
   grid-column: 2/3;
   grid-row: 3/4;
-  /*place-self: end center;*/
   align-self: end;
   justify-self: center;
   z-index: 3;
@@ -356,7 +355,6 @@ a.basket-btn:hover {
 .tagline-header { 
   grid-row: 4/5;
   grid-column: 2/3;
-  /*place-self: end center;*/
   align-self: end;
   justify-self: center;
   z-index: 3;
@@ -392,7 +390,6 @@ a.basket-btn:hover {
 .sub-discription {  
   grid-row: 5/6;
   grid-column: 2/3;
-  /*place-self: center;*/
   align-self: center;
   justify-self: center;
   z-index: 3;
@@ -408,13 +405,11 @@ a.basket-btn:hover {
 .find-out {
   grid-row: 6/7;
   grid-column: 2/3;
-  /*place-self: end center;*/
   align-self: end;
   justify-self: center;
   z-index: 3;
   display: flex;
   align-items: center;
-  /*justify-content: space-evenly;*/
   justify-content: space-around;
   height: 50px;
   width: 170px;
@@ -437,7 +432,6 @@ a.basket-btn:hover {
 .bg-changer {
   grid-row: 7/8;
   grid-column: 2/3;
-  /*place-self: end center;*/
   align-self: end;
   justify-self: center;
   z-index: 0;
@@ -530,6 +524,7 @@ a.basket-btn:hover {
   display:flex;
   align-items: flex-end;
 }
+
 .menu-of-ad > a:hover > span {
   text-decoration: underline;
 }
@@ -556,7 +551,6 @@ a.basket-btn:hover {
 .blog-title {
   grid-row: 10/11;
   grid-column: 2/3;
-  /*place-self: end center;*/
   align-self: end;
   justify-self: center;
 }
@@ -572,7 +566,6 @@ a.basket-btn:hover {
 .blog-content {
   grid-row: 11/12;
   grid-column: 2/3;
-  /*place-self: center;*/
   align-self: center;
   justify-self: center;
 }
@@ -625,40 +618,47 @@ main {
   background: url(../images/subway-woman.jpg) center/100% 100%;
   opacity: 0.9;
 }
+
 .img-item-5 {
   grid-row: 4/5;
   grid-column: 1/2;
   background: url(../images/legs-sniq.jpg) center/100% 100%;
   opacity: 0.9;
 }
+
 .img-item-6 {
   grid-row: 3/5;
   grid-column: 3/5;
   background: url(../images/guy-with-finger.jpg) center/100% 100%;
   opacity: 0.9;
 }
+
 .img-item-6 > div {
   background: url(../images/foreground-guy-finger.png) center/100% 100%;
   height: 100%;
   opacity: 0.34;
 }
+
 .img-item-7 {
   grid-row: 5/7;
   grid-column: 1/3;
   background: url(../images/rap-god.jpg) center/100% 100%;
   opacity: 0.95;
 }
+
 .img-item-8 {
   grid-row: 5/6;
   grid-column: 4/5;
   background: url(../images/cola-drinker.jpg) center/100% 100%;
   opacity: 0.9;
 }
+
 .img-item-9 {
   grid-row: 6/7;
   grid-column: 3/4;
   background: url(../images/adidas-sniq.jpg) center/100% 100%;
 }
+
 .img-item-10 {
   grid-row: 7/8;
   grid-column: 2/3;
@@ -671,6 +671,7 @@ main {
   background: url(../images/golden-teeth.jpg) center/100% 100%;
   opacity: 0.92;
 }
+
 .img-item-12 {
   grid-row: 7/9;
   grid-column: 3/5;
@@ -706,30 +707,37 @@ main {
   grid-row: 1/2;
   grid-column: 3/4;
 }
+
 .blog-header-2 {
   grid-row: 2/3;
   grid-column: 4/5;
 }
+
 .blog-header-3 {
   grid-row: 3/4;
   grid-column: 1/2;
 }
+
 .blog-header-4 {
   grid-row: 4/5;
   grid-column: 2/3;
 }
+
 .blog-header-5 {
   grid-row: 5/6;
   grid-column: 3/4;
 }
+
 .blog-header-6 {
   grid-row: 6/7;
   grid-column: 4/5;
 }
+
 .blog-header-7 {
   grid-row: 7/8;
   grid-column: 1/2;
 }
+
 .blog-header-8 {
   grid-row: 8/9;
   grid-column: 2/3;
@@ -749,6 +757,7 @@ main {
   color: rgba(0,0,0, 0.78);
   text-transform: uppercase;
 }
+
 .read-more:hover {
   border-color: #ff6600;
 }
@@ -764,6 +773,7 @@ main {
   grid-column: 1/4;
   background-color: rgba(0,0,0, 0.08);
 }
+
 .strip-logos-content {
   grid-row: 15/16;
   grid-column: 2/3;
@@ -772,6 +782,7 @@ main {
   align-items: center;
   justify-content: space-around;
 }
+
 .strip-logos-content img {
   mix-blend-mode: multiply;
   opacity: 0.44;
@@ -781,6 +792,7 @@ main {
   mix-blend-mode: normal;
   opacity: 0.65;
 }
+
 .strip-logos-content img[alt=adidas],
 .strip-logos-content img[alt=puma],
 .strip-logos-content img[alt=nike] {
@@ -796,16 +808,17 @@ main {
 .rhomb {
   grid-row: 16/17;
   grid-column: 2/3;
-  /*place-self: start center;*/
   align-self: start;
   justify-self: center;
   transform: translate(0, -50%);
 }
+
 .footer-bg {
   grid-row: 16/19;
   grid-column: 1/4;
   background-color: #161616;
 }
+
 .footer-nav {
   grid-row: 16/17;
   grid-column:2/3;
@@ -818,7 +831,6 @@ main {
 .footer-nav > div {
   display: flex;
   flex-wrap: wrap;
-  /*justify-content: space-evenly;*/
   justify-content: space-around;
   width: calc(50% - 74px - 60px);
 }
@@ -868,7 +880,6 @@ main {
 .copyright {
   grid-row: 18/19;
   grid-column: 2/3;
-  /*place-self: start center;*/
   align-self: start;
   justify-self: center;
   padding-top: 49px;
@@ -878,7 +889,7 @@ main {
   color: rgba(255,255,255, 0.3);
 }
 
-/* class for menu button at low resolution screen */
+/* menu btn class for low resolution screens */
 
 .menu-nav-container {
   position: relative;
