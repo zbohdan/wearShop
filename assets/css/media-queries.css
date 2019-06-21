@@ -598,15 +598,6 @@
     outline:none;
   }
 
-/*  .search-btn:hover span {
-   background-color: #f60 !important;
-  }
-
-  .search-btn:hover img {
-    opacity: 1 !important;
-    filter: invert(1) !important;
-  }*/
-
   .container-search {
     grid-row: 2/19;
     grid-column: 2/3;
@@ -755,12 +746,21 @@
     grid-column: 2/3;
   }
 
+  .content-strip-top span, .content-strip-top a {
+    padding: 0;
+  }
+
   .content-strip-top > span:first-child {
     min-width: 120px;
     margin-right: auto;
     margin-left: 87px;
   }
 
+  .content-strip-top > div {
+    display: flex;
+    flex: 0 0 auto;
+  }
+  
 /* HEADER STRIP NAV */
 
   .logo-header {
@@ -882,15 +882,6 @@
     left: 18px;
   }
 
-
-  .nav-logos-pretty {
-    display: flex;
-    flex: 0 0 auto;
-  }
-
-  .content-strip-top span, .content-strip-top a {
-    padding: 0;
-  }
   .strip-nav {
     display: none;
   }
@@ -1181,6 +1172,10 @@
     grid-column: 2/3;
   }
 
+  .content-strip-top span, .content-strip-top a {
+    padding: 0;
+  }
+
   .content-strip-top > span:first-child {
     display: none !important;
     min-width: 120px;
@@ -1188,10 +1183,16 @@
     margin-left: 87px;
   }
 
+  .content-strip-top > div {
+    flex: 1 0 auto !important;
+    display: flex;
+    justify-content: space-around;
+  }
+
   .user-menu > span > img {
     margin-left: 5px;
   }
-
+  
 /* HEADER STRIP NAV */
 
   .logo-header {
@@ -1314,16 +1315,6 @@
     left: 18px;
   }
 
-
-  .nav-logos-pretty {
-    flex: 0 0 auto;
-    display: flex;
-  }
-
-  .content-strip-top span, .content-strip-top a {
-    padding: 0;
-  }
-
   .strip-nav {
     display: none;
   }
@@ -1345,7 +1336,7 @@
     line-height: 70px;
   }
 
-  .content-nav > a{
+  .content-nav > a {
     padding-right: initial;
     padding-left: initial;
     text-align: center;
@@ -1363,12 +1354,6 @@
     justify-content: space-around;
     height: 42px;
     margin: 0;
-  }
-
-  .nav-logos-pretty {
-    /*justify-content: space-evenly;*/
-    justify-content: space-around;
-    flex-grow: 1 !important;
   }
 
   .menu-nav-container.content-nav a {
