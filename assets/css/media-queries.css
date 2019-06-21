@@ -1438,8 +1438,9 @@
     z-index: 7;
     display: none;
     height: 42px;
+    width: 100% !important;
     min-width: 100px;
-    padding-left: 0;
+    padding-left: 42px;
     border: 1px solid #ff6600;
     border-left: none;
     border-radius: 0 !important;

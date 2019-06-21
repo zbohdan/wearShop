@@ -525,252 +525,243 @@
     //            RESIZE FUNCTIONS
     // --------------------------------------------
 
-    let containerSearch = document.querySelector(".container-search")
-
-    function inputPosChanger() {
-          let inputSearchInsertTarget = document.querySelector(".basket-btn");
-          let inputSearchHolder;  
-
-      if (media(3) || media(5) || media(6)) {
-          inputSearchHolder = inputTextSearch.parentNode.removeChild(inputTextSearch);
-          inputSearchInsertTarget.parentNode.insertBefore(inputSearchHolder, inputSearchInsertTarget);
-      } else {
-        inputSearchHolder = inputTextSearch.parentNode.removeChild(inputTextSearch);
-        containerSearch.appendChild(inputSearchHolder);
-      }
-    }
-
-    function fixInputSearch(){
-      switch(media()) {
-        case 0:
-        case 1:
-        case 2:
-          inputTextSearch.style.display = "block";
-          inputTextSearch.style.left = "auto";
-          inputTextSearch.style.width = "100%";
-          inputTextSearch.style.transition = "top 1s ease";
-          inputTextSearch.style.transform = "translate(0)";
-          if (inputCheckBoxSearch.checked) {
-            inputTextSearch.style.top = "0px";
-          } else {
-            inputTextSearch.style.top = "calc(-100% + 77px)"
-          }
-          break;
-        case 3:
-        case 5:
-          inputTextSearch.style.display = "block";
-          inputTextSearch.style.flex = "1";
-          inputTextSearch.style.width = "100px";
-          inputTextSearch.style.transform = "translate(-20px)";
-          break;
-        case 4:
-          inputTextSearch.style.top = "52px";
-          inputTextSearch.style.left = "180px";
-          inputTextSearch.style.transform = "translate(0)";
-          if (inputCheckBoxSearch.checked) {
-            inputTextSearch.style.display = "block";
-            inputTextSearch.style.width = "calc(100% - 20px)";
-            inputTextSearch.style.transition = "top 1s ease, left 0.5s ease, width 0.5s ease";
-          } else {
-            inputTextSearch.style.display = "none";
-            inputTextSearch.style.transition = "top 0.5s ease, left 1s ease, width 0.5s ease";
-            setInputStyle();
-          }
-          break;
-        case 6: 
-          if (inputCheckBoxSearch.checked) {
-            inputTextSearch.style.display = "block";
-            inputTextSearch.style.flex = "1";
-            inputTextSearch.style.width = "100px";
-            inputTextSearch.style.transform = "translate(-10px)";
-          } else {
-            inputTextSearch.style.display = "none";
-          }     
-          break;
-        case 7: 
-          if (inputCheckBoxSearch.checked) {
-            inputTextSearch.style.display = "block";
-            inputTextSearch.style.flex = "1";
-            inputTextSearch.style.transform = "translate(0)";
-          } else {
-            inputTextSearch.style.display = "none";
-          }
-          break;
-      }
-    }
-
-    let navLogos = document.querySelector(".content-nav > div");
-    let navLogosContainer = document.querySelector(".content-nav")
-    let navLogosInsertTarget = document.querySelector(".content-strip-top > span");
-    let navLogosHolder;
-
-    function navLogosPosChanger() {
-      if (media(6) || media(7)) {
-        navLogosHolder = navLogos.parentNode.removeChild(navLogos);
-        if (!navLogosHolder.classList.contains("nav-logos-pretty")) navLogosHolder.classList.add("nav-logos-pretty");
-        navLogosInsertTarget.parentNode.insertBefore(navLogosHolder, navLogosInsertTarget.nextSibling);
-      } else {
-        navLogosHolder = navLogos.parentNode.removeChild(navLogos);
-        if (navLogosHolder.classList.contains("nav-logos-pretty")) navLogosHolder.classList.remove("nav-logos-pretty");
-        navLogosContainer.appendChild(navLogosHolder);
-      }
-    }
-
-    let navItems = document.querySelectorAll(".content-strip-top > a");
-    let navItemsContainer = document.querySelector(".content-strip-top")
-    let navItemsInsertTarget = document.querySelector(".user-menu > div > a:last-of-type");
-    let navItemsHolder = [];
-
-    function navItemsTopPosChanger() {
-      if (media(6) || media(7) || media(5) & window.innerWidth <= 715) {
-        navItems.forEach(i => {
-          navItemsHolder.push(i.parentNode.removeChild(i));
-        });
-        navItemsHolder.forEach(i => {
-          if (!i.classList.contains("nav-items-pretty")) i.classList.add("nav-items-pretty");
-          navItemsInsertTarget.parentNode.insertBefore(i, navItemsInsertTarget);
-        });
-      } else {
-        navItems.forEach(i => {
-          navItemsHolder.push(i.parentNode.removeChild(i));
-        });
-        navItemsHolder.forEach(i => {
-          if (i.classList.contains("nav-items-pretty")) i.classList.remove("nav-items-pretty");
-          navItemsContainer.insertBefore(i, navItemsContainer.children[1]);
-        });
-
-      }
-    }
-
-    let navIcon = document.querySelector(".nav-icon-1");
-    let navIconContainer = document.querySelector(".content-nav")
-    let navIconInsertTarget = document.querySelector(".content-strip-top > span");
-    let navIconHolder;
-
-    function navIconPosChanger() {
-      if (media(6) || media(7)) {
-        navIconHolder = navIcon.parentNode.removeChild(navIcon);
-        if (!navIconHolder.classList.contains("nav-icon-pretty")) navIconHolder.classList.add("nav-icon-pretty");
-        navIconInsertTarget.parentNode.insertBefore(navIconHolder, navIconInsertTarget.nextSibling);
-      } else {
-        navIconHolder = navIcon.parentNode.removeChild(navIcon);
-        if (navIconHolder.classList.contains("nav-icon-pretty")) navIconHolder.classList.remove("nav-icon-pretty");
-        navIconContainer.insertBefore(navIconHolder, navIconContainer.firstElementChild);
-      }
-    }
-
     function fixElementsStyle() {
-      switch(media()) {
-        case 0:
-        case 1:
-        case 2:
-          // divNavLogos.style.flexGrow = "0"
-          spanDescribe.style.display = "block";
-          searchSpan.style.backgroundColor = "initial";
-          searchIcon.style.opacity = "0.7";
-          searchIcon.style.filter = "invert(0)";
-          // searchSpan.style.transform = "translate(0)";
-          if (document.querySelector("img[src*='arrow-lef']")) document.querySelector("img[src*='arrow-lef']").parentNode.remove();
-          break;
-        case 3:
-        case 5:
-          // divNavLogos.style.flexGrow = "1"
-          spanDescribe.style.display = "block";
-          searchSpan.style.backgroundColor = "#f60";
-          searchIcon.style.opacity = "1";
-          searchIcon.style.filter = "invert(1)";
-          // searchSpan.style.transform = "translate(20px)";
-          break;
-        case 4:
-          spanDescribe.style.display = "block";
-          if (document.querySelector("img[src*='arrow-lef']")) document.querySelector("img[src*='arrow-lef']").parentNode.remove();
-          // divNavLogos.style.flexGrow = "0"
-          // searchSpan.style.transform = "translate(0)";
-          if (inputCheckBoxSearch.checked) {
-            searchSpan.style.backgroundColor = "#f60";
-            searchIcon.style.opacity = "1";
-            searchIcon.style.filter = "invert(1)";
-            searchSpan.style.top = "-60px";
-            searchSpan.style.left = "calc(100% + 10px)";  
-          } else {
-            searchSpan.style.backgroundColor = "white";
-            searchIcon.style.opacity = "0.7";
-            searchIcon.style.filter = "invert(0)";
-            searchSpan.style.top = "auto";
-            searchSpan.style.left = "0";
-          }
-          break;
-        case 6:
-          searchSpan.style.backgroundColor = "initial";
-          searchIcon.style.opacity = "0.3";
-          searchIcon.style.filter = "invert(1)";
-          if (inputCheckBoxSearch.checked) {
-            spanDescribe.style.display = "none";
-            icon.style.marginLeft = "90px";
-            searchBtn.style.marginRight = "auto";
-            divNavLogos.style.flexGrow = "1";
-            // searchSpan.style.transform = "translate(18px)";
-          } else {
-            spanDescribe.style.display = "block";
-            icon.style.margin = "0";
-            searchBtn.style.marginRight = "0";
-            divNavLogos.style.flexGrow = "0";
-            // searchSpan.style.transform = "translate(0)";
-          }
-          break;
-        case 7:
-          searchSpan.style.backgroundColor = "initial";
-          searchIcon.style.opacity = "0.3";
-          searchIcon.style.filter = "invert(1)";
-          searchBtn.style.marginRight = "0";
-          if (inputCheckBoxSearch.checked) {
-            if (!(document.querySelector("img[src*='arrow-lef']"))){
-              let arrowLeft = document.createElement("img");
-              let arrowBg = document.createElement("div");
-              arrowBg.style.backgroundColor = "#202020";
-              arrowBg.style.zIndex = "8";
-              arrowBg.style.height = "42px";
-              arrowBg.style.width = "42px";
-              arrowBg.style.position = "fixed";
-              arrowBg.style.top =  "0";
-              arrowBg.style.left = "0";
-              arrowBg.style.borderLeft = arrowBg.style.borderBottom = arrowBg.style.borderTop = "1px solid #ff6600";
-              arrowBg.style.cursor = "pointer";
+         switch(media()) {
+           case 0:
+           case 1:
+           case 2:
+             inputTextSearch.style.display = "block";
+             inputTextSearch.style.left = "auto";
+             inputTextSearch.style.width = "100%";
+             inputTextSearch.style.transition = "top 1s ease";
+             inputTextSearch.style.transform = "translate(0)";
+             spanDescribe.style.display = "block";
+             searchSpan.style.backgroundColor = "initial";
+             searchIcon.style.opacity = "0.7";
+             searchIcon.style.filter = "invert(0)";
 
+             if (document.querySelector("img[src*='arrow-lef']")) document.querySelector("img[src*='arrow-lef']").parentNode.remove();
 
+             if (inputCheckBoxSearch.checked) {
+               inputTextSearch.style.top = "0px";
+             } else {
+               inputTextSearch.style.top = "calc(-100% + 77px)"
+             }
+             break;
+           case 3:
+           case 5:
+             inputTextSearch.style.display = "block";
+             inputTextSearch.style.flex = "1";
+             inputTextSearch.style.transform = "translate(-20px)";
+             spanDescribe.style.display = "block";
+             searchSpan.style.backgroundColor = "#f60";
+             searchIcon.style.opacity = "1";
+             searchIcon.style.filter = "invert(1)";
+             break;
+           case 4:
+             inputTextSearch.style.top = "52px";
+             inputTextSearch.style.left = "180px";
+             inputTextSearch.style.transform = "translate(0)";
+             spanDescribe.style.display = "block";
 
-              arrowLeft.setAttribute("src", "assets/images/arrow-left.png");
-              arrowLeft.style.height = "40px";
-              arrowLeft.style.width = "40px"
-              arrowLeft.style.filter = "invert(1)";
-              arrowLeft.style.opacity = "0.3";
-              inputTextSearch.parentNode.insertBefore(arrowBg, inputTextSearch);
-              arrowBg.appendChild(arrowLeft);
-              inputTextSearch.focus();
-              arrowBg.addEventListener("click", e => {
-                inputCheckBoxSearch.checked = false;
-                inputCheckBoxSearch.dispatchEvent(new Event("change"));
-              });
-            }
-          } else {
-            if (document.querySelector("img[src*='arrow-lef']")) document.querySelector("img[src*='arrow-lef']").parentNode.remove();
-            // searchSpan.style.transform = "translate(0)";
-          }
-          break;
-      }
-    }
+             if (document.querySelector("img[src*='arrow-lef']")) document.querySelector("img[src*='arrow-lef']").parentNode.remove();
 
-    window.onresize = function(event) {
-      keyPrev = keyCurrent;
-      keyCurrent = media();
-      navLogosPosChanger();
-      navItemsTopPosChanger();
-      navIconPosChanger();
-      inputPosChanger();
-      fixInputSearch();
-      fixElementsStyle();
-      console.log(`keyCurrent = ${keyCurrent} keyPrevious = ${keyPrev}`);
-    }
+             if (inputCheckBoxSearch.checked) {
+               inputTextSearch.style.display = "block";
+               inputTextSearch.style.width = "calc(100% - 20px)";
+               inputTextSearch.style.transition = "top 1s ease, left 0.5s ease, width 0.5s ease";
+               searchSpan.style.backgroundColor = "#f60";
+               searchIcon.style.opacity = "1";
+               searchIcon.style.filter = "invert(1)";
+               searchSpan.style.top = "-60px";
+               searchSpan.style.left = "calc(100% + 10px)";  
+             } else {
+               inputTextSearch.style.display = "none";
+               inputTextSearch.style.transition = "top 0.5s ease, left 1s ease, width 0.5s ease";
+               setInputStyle();
+               searchSpan.style.backgroundColor = "white";
+               searchIcon.style.opacity = "0.7";
+               searchIcon.style.filter = "invert(0)";
+               searchSpan.style.top = "auto";
+               searchSpan.style.left = "0";
+             }
+             break;
+           case 6:
+             searchSpan.style.backgroundColor = "initial";
+             searchIcon.style.opacity = "0.3";
+             searchIcon.style.filter = "invert(1)";
+             if (inputCheckBoxSearch.checked) {
+               inputTextSearch.style.display = "block";
+               inputTextSearch.style.flex = "1";
+               inputTextSearch.style.transform = "translate(-10px)";
+               spanDescribe.style.display = "none";
+               icon.style.marginLeft = "90px";
+               searchBtn.style.marginRight = "auto";
+               divNavLogos.style.flexGrow = "1";
+             } else {
+               inputTextSearch.style.display = "none";
+               spanDescribe.style.display = "block";
+               icon.style.margin = "0";
+               searchBtn.style.marginRight = "0";
+               divNavLogos.style.flexGrow = "0";
+             }
+             break;
+           case 7:
+             searchSpan.style.backgroundColor = "initial";
+             searchIcon.style.opacity = "0.3";
+             searchIcon.style.filter = "invert(1)";
+             searchBtn.style.marginRight = "0";
+             if (inputCheckBoxSearch.checked) {
+               inputTextSearch.style.display = "block";
+               inputTextSearch.style.flex = "1";
+               inputTextSearch.style.transform = "translate(0)";
+
+               if (!(document.querySelector("img[src*='arrow-lef']"))){
+                 let arrowLeft = document.createElement("img");
+                 let arrowBg = document.createElement("div");
+                 arrowBg.style.backgroundColor = "#202020";
+                 arrowBg.style.zIndex = "8";
+                 arrowBg.style.height = "42px";
+                 arrowBg.style.width = "42px";
+                 arrowBg.style.position = "fixed";
+                 arrowBg.style.top =  "0";
+                 arrowBg.style.left = "0";
+                 arrowBg.style.borderLeft = arrowBg.style.borderBottom = arrowBg.style.borderTop = "1px solid #ff6600";
+                 arrowBg.style.cursor = "pointer";
+
+                 arrowLeft.setAttribute("src", "assets/images/arrow-left.png");
+                 arrowLeft.style.height = "40px";
+                 arrowLeft.style.width = "40px"
+                 arrowLeft.style.filter = "invert(1)";
+                 arrowLeft.style.opacity = "0.3";
+                 inputTextSearch.parentNode.insertBefore(arrowBg, inputTextSearch);
+                 arrowBg.appendChild(arrowLeft);
+                 
+                 inputTextSearch.focus();
+                 arrowBg.addEventListener("click", e => {
+                   inputCheckBoxSearch.checked = false;
+                   inputCheckBoxSearch.dispatchEvent(new Event("change"));
+                 });
+             } else {
+               inputTextSearch.style.display = "none";
+               if (document.querySelector("img[src*='arrow-lef']")) document.querySelector("img[src*='arrow-lef']").parentNode.remove();
+             }
+             break;
+         }
+       }
+
+       class WanderingElement {
+
+         constructor(el, [elTarget, targetWhere], [elStart, startWhere], mediaQ, plural) {
+           if (plural) this.el = document.querySelectorAll(el);
+           else this.el = document.querySelector(el);
+           this.elTarget = document.querySelector(elTarget);
+           this.targetWhere = targetWhere;
+           this.elStart = document.querySelector(elStart);
+           this.startWhere = startWhere;
+           this.mediaQ = mediaQ;
+           if (plural) this.holder = [];
+           else this.holder;
+           this.plural = plural;
+         }
+
+         changePos() {
+           if (!this.plural) {
+             if (eval(this.mediaQ)) {
+               this.holder = this.el.parentNode.removeChild(this.el);
+
+               switch (this.targetWhere) {
+                 case "before":
+                   this.elTarget.parentNode.insertBefore(this.holder, this.elTarget);
+                   break;
+                 case "after":
+                   this.elTarget.parentNode.insertBefore(this.holder, this.elTarget.nextSibling);
+                   break;
+                 case "last":
+                   this.elTarget.parentNode.appendChild(this.elTarget);
+                   break;
+               }
+             } else {
+               this.holder = this.el.parentNode.removeChild(this.el);
+
+               switch (this.startWhere) {
+                 case "first":
+                   this.elStart.insertBefore(this.holder, this.elStart.firstElementChild);
+                   break;
+                 case "second":
+                   this.elStart.insertBefore(this.holder, this.elStart.firstElementChild.nextElementSibling);
+                   break;
+                 case "last":
+                   this.elStart.appendChild(this.holder);
+                   break;
+               }
+             }
+           } else {
+             if (eval(this.mediaQ)) {
+               this.el.forEach(i => {
+                 this.holder.push(i.parentNode.removeChild(i));
+               });
+
+               switch (this.targetWhere) {
+                 case "before":
+                   this.holder.forEach(i => {
+                     this.elTarget.parentNode.insertBefore(i, this.elTarget);
+                   });
+                   break;
+                 case "after":
+                   this.holder.forEach(i => {
+                     this.elTarget.parentNode.insertBefore(i, this.elTarget.nextSibling);
+                   });
+                   break;
+                 case "last":
+                   this.holder.forEach(i => {
+                     this.elTarget.parentNode.appendChild(this.elTarget);
+                   });
+                   break;
+               }
+             } else {
+               this.el.forEach(i => {
+                 this.holder.push(i.parentNode.removeChild(i));
+               });
+
+               switch (this.startWhere) {
+                 case "first":
+                   this.holder.forEach(i => {
+                     this.elStart.insertBefore(i, this.elStart.firstElementChild);
+                   })
+                   break;
+                 case "second":
+                   this.holder.forEach(i => {
+                     this.elStart.insertBefore(i, this.elStart.firstElementChild.nextElementSibling);
+                   })
+                   break;
+                 case "last":
+                   this.elStart.appendChild(this.holder);
+                   this.holder.forEach(i => {
+                     this.elStart.appendChild(i);
+                   })
+                   break;
+               }
+             }
+           }
+         }
+       }
+
+       let navIcon = new WanderingElement(".nav-icon-1", [".content-strip-top > span", "after"], [".content-nav", "first"], "media(6) || media(7)");
+       let navLogos = new WanderingElement(".content-nav > div", [".content-strip-top > span", "after"], [".content-nav", "last"], "media(6) || media(7)");
+       let inputAct = new WanderingElement(".input-search", [".basket-btn", "before"], [".container-search", "last"], "media(3) || media(5) || media(6)");
+       let navItems = new WanderingElement(".content-strip-top > a", [".user-menu > div > a:last-of-type", "before"], [".content-strip-top", "second"], "media(6) || media(7) || media(5) & window.innerWidth <= 715", true);
+
+       window.onresize = function(event) {
+         keyPrev = keyCurrent;
+         keyCurrent = media();
+         navLogos.changePos();
+         navItems.changePos();
+         navIcon.changePos();
+         inputAct.changePos();
+         fixElementsStyle();
+         console.log(`keyCurrent = ${keyCurrent} keyPrevious = ${keyPrev}`);
+       }
 
     // --------------------------------------------
     //            STRIP-NAV MENU 
