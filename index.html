@@ -526,129 +526,130 @@
     // --------------------------------------------
 
     function fixElementsStyle() {
-         switch(media()) {
-           case 0:
-           case 1:
-           case 2:
-             inputTextSearch.style.display = "block";
-             inputTextSearch.style.left = "auto";
-             inputTextSearch.style.width = "100%";
-             inputTextSearch.style.transition = "top 1s ease";
-             inputTextSearch.style.transform = "translate(0)";
-             spanDescribe.style.display = "block";
-             searchSpan.style.backgroundColor = "initial";
-             searchIcon.style.opacity = "0.7";
-             searchIcon.style.filter = "invert(0)";
+      switch(media()) {
+        case 0:
+        case 1:
+        case 2:
+          inputTextSearch.style.display = "block";
+          inputTextSearch.style.left = "auto";
+          inputTextSearch.style.width = "100%";
+          inputTextSearch.style.transition = "top 1s ease";
+          inputTextSearch.style.transform = "translate(0)";
+          spanDescribe.style.display = "block";
+          searchSpan.style.backgroundColor = "initial";
+          searchIcon.style.opacity = "0.7";
+          searchIcon.style.filter = "invert(0)";
 
-             if (document.querySelector("img[src*='arrow-lef']")) document.querySelector("img[src*='arrow-lef']").parentNode.remove();
+          if (document.querySelector("img[src*='arrow-lef']")) document.querySelector("img[src*='arrow-lef']").parentNode.remove();
 
-             if (inputCheckBoxSearch.checked) {
-               inputTextSearch.style.top = "0px";
-             } else {
-               inputTextSearch.style.top = "calc(-100% + 77px)"
-             }
-             break;
-           case 3:
-           case 5:
-             inputTextSearch.style.display = "block";
-             inputTextSearch.style.flex = "1";
-             inputTextSearch.style.transform = "translate(-20px)";
-             spanDescribe.style.display = "block";
-             searchSpan.style.backgroundColor = "#f60";
-             searchIcon.style.opacity = "1";
-             searchIcon.style.filter = "invert(1)";
-             break;
-           case 4:
-             inputTextSearch.style.top = "52px";
-             inputTextSearch.style.left = "180px";
-             inputTextSearch.style.transform = "translate(0)";
-             spanDescribe.style.display = "block";
+          if (inputCheckBoxSearch.checked) {
+            inputTextSearch.style.top = "0px";
+          } else {
+            inputTextSearch.style.top = "calc(-100% + 77px)"
+          }
+          break;
+        case 3:
+        case 5:
+          inputTextSearch.style.display = "block";
+          inputTextSearch.style.flex = "1";
+          inputTextSearch.style.transform = "translate(-20px)";
+          spanDescribe.style.display = "block";
+          searchSpan.style.backgroundColor = "#f60";
+          searchIcon.style.opacity = "1";
+          searchIcon.style.filter = "invert(1)";
+         break;
+        case 4:
+          inputTextSearch.style.top = "52px";
+          inputTextSearch.style.left = "180px";
+          inputTextSearch.style.transform = "translate(0)";
+          spanDescribe.style.display = "block";
 
-             if (document.querySelector("img[src*='arrow-lef']")) document.querySelector("img[src*='arrow-lef']").parentNode.remove();
+          if (document.querySelector("img[src*='arrow-lef']")) document.querySelector("img[src*='arrow-lef']").parentNode.remove();
 
-             if (inputCheckBoxSearch.checked) {
-               inputTextSearch.style.display = "block";
-               inputTextSearch.style.width = "calc(100% - 20px)";
-               inputTextSearch.style.transition = "top 1s ease, left 0.5s ease, width 0.5s ease";
-               searchSpan.style.backgroundColor = "#f60";
-               searchIcon.style.opacity = "1";
-               searchIcon.style.filter = "invert(1)";
-               searchSpan.style.top = "-60px";
-               searchSpan.style.left = "calc(100% + 10px)";  
-             } else {
-               inputTextSearch.style.display = "none";
-               inputTextSearch.style.transition = "top 0.5s ease, left 1s ease, width 0.5s ease";
-               setInputStyle();
-               searchSpan.style.backgroundColor = "white";
-               searchIcon.style.opacity = "0.7";
-               searchIcon.style.filter = "invert(0)";
-               searchSpan.style.top = "auto";
-               searchSpan.style.left = "0";
-             }
-             break;
-           case 6:
-             searchSpan.style.backgroundColor = "initial";
-             searchIcon.style.opacity = "0.3";
-             searchIcon.style.filter = "invert(1)";
-             if (inputCheckBoxSearch.checked) {
-               inputTextSearch.style.display = "block";
-               inputTextSearch.style.flex = "1";
-               inputTextSearch.style.transform = "translate(-10px)";
-               spanDescribe.style.display = "none";
-               icon.style.marginLeft = "90px";
-               searchBtn.style.marginRight = "auto";
-               divNavLogos.style.flexGrow = "1";
-             } else {
-               inputTextSearch.style.display = "none";
-               spanDescribe.style.display = "block";
-               icon.style.margin = "0";
-               searchBtn.style.marginRight = "0";
-               divNavLogos.style.flexGrow = "0";
-             }
-             break;
-           case 7:
-             searchSpan.style.backgroundColor = "initial";
-             searchIcon.style.opacity = "0.3";
-             searchIcon.style.filter = "invert(1)";
-             searchBtn.style.marginRight = "0";
-             if (inputCheckBoxSearch.checked) {
-               inputTextSearch.style.display = "block";
-               inputTextSearch.style.flex = "1";
-               inputTextSearch.style.transform = "translate(0)";
+          if (inputCheckBoxSearch.checked) {
+            inputTextSearch.style.display = "block";
+            inputTextSearch.style.width = "calc(100% - 20px)";
+            inputTextSearch.style.transition = "top 1s ease, left 0.5s ease, width 0.5s ease";
+            searchSpan.style.backgroundColor = "#f60";
+            searchIcon.style.opacity = "1";
+            searchIcon.style.filter = "invert(1)";
+            searchSpan.style.top = "-60px";
+            searchSpan.style.left = "calc(100% + 10px)";  
+          } else {
+            inputTextSearch.style.display = "none";
+            inputTextSearch.style.transition = "top 0.5s ease, left 1s ease, width 0.5s ease";
+            setInputStyle();
+            searchSpan.style.backgroundColor = "white";
+            searchIcon.style.opacity = "0.7";
+            searchIcon.style.filter = "invert(0)";
+            searchSpan.style.top = "auto";
+            searchSpan.style.left = "0";
+          }
+          break;
+        case 6:
+          searchSpan.style.backgroundColor = "initial";
+          searchIcon.style.opacity = "0.3";
+          searchIcon.style.filter = "invert(1)";
+          if (inputCheckBoxSearch.checked) {
+            inputTextSearch.style.display = "block";
+            inputTextSearch.style.flex = "1";
+            inputTextSearch.style.transform = "translate(-10px)";
+            spanDescribe.style.display = "none";
+            icon.style.marginLeft = "90px";
+            searchBtn.style.marginRight = "auto";
+            divNavLogos.style.flexGrow = "1";
+          } else {
+            inputTextSearch.style.display = "none";
+            spanDescribe.style.display = "block";
+            icon.style.margin = "0";
+            searchBtn.style.marginRight = "0";
+            divNavLogos.style.flexGrow = "0";
+          }
+          break;
+        case 7:
+          searchSpan.style.backgroundColor = "initial";
+          searchIcon.style.opacity = "0.3";
+          searchIcon.style.filter = "invert(1)";
+          searchBtn.style.marginRight = "0";
+          if (inputCheckBoxSearch.checked) {
+            inputTextSearch.style.display = "block";
+            inputTextSearch.style.flex = "1";
+            inputTextSearch.style.transform = "translate(0)";
 
-               if (!(document.querySelector("img[src*='arrow-lef']"))){
-                 let arrowLeft = document.createElement("img");
-                 let arrowBg = document.createElement("div");
-                 arrowBg.style.backgroundColor = "#202020";
-                 arrowBg.style.zIndex = "8";
-                 arrowBg.style.height = "42px";
-                 arrowBg.style.width = "42px";
-                 arrowBg.style.position = "fixed";
-                 arrowBg.style.top =  "0";
-                 arrowBg.style.left = "0";
-                 arrowBg.style.borderLeft = arrowBg.style.borderBottom = arrowBg.style.borderTop = "1px solid #ff6600";
-                 arrowBg.style.cursor = "pointer";
+            if (!(document.querySelector("img[src*='arrow-lef']"))) {
+              let arrowLeft = document.createElement("img");
+              let arrowBg = document.createElement("div");
+              arrowBg.style.backgroundColor = "#202020";
+              arrowBg.style.zIndex = "8";
+              arrowBg.style.height = "42px";
+              arrowBg.style.width = "42px";
+              arrowBg.style.position = "fixed";
+              arrowBg.style.top =  "0";
+              arrowBg.style.left = "0";
+              arrowBg.style.borderLeft = arrowBg.style.borderBottom = arrowBg.style.borderTop = "1px solid #ff6600";
+              arrowBg.style.cursor = "pointer";
 
-                 arrowLeft.setAttribute("src", "assets/images/arrow-left.png");
-                 arrowLeft.style.height = "40px";
-                 arrowLeft.style.width = "40px"
-                 arrowLeft.style.filter = "invert(1)";
-                 arrowLeft.style.opacity = "0.3";
-                 inputTextSearch.parentNode.insertBefore(arrowBg, inputTextSearch);
-                 arrowBg.appendChild(arrowLeft);
-                 
-                 inputTextSearch.focus();
-                 arrowBg.addEventListener("click", e => {
-                   inputCheckBoxSearch.checked = false;
-                   inputCheckBoxSearch.dispatchEvent(new Event("change"));
-                 });
-             } else {
-               inputTextSearch.style.display = "none";
-               if (document.querySelector("img[src*='arrow-lef']")) document.querySelector("img[src*='arrow-lef']").parentNode.remove();
-             }
-             break;
-         }
-       }
+              arrowLeft.setAttribute("src", "assets/images/arrow-left.png");
+              arrowLeft.style.height = "40px";
+              arrowLeft.style.width = "40px"
+              arrowLeft.style.filter = "invert(1)";
+              arrowLeft.style.opacity = "0.3";
+              inputTextSearch.parentNode.insertBefore(arrowBg, inputTextSearch);
+              arrowBg.appendChild(arrowLeft);
+
+              inputTextSearch.focus();
+              arrowBg.addEventListener("click", e => {
+               inputCheckBoxSearch.checked = false;
+               inputCheckBoxSearch.dispatchEvent(new Event("change"));
+              });
+            } else {
+              inputTextSearch.style.display = "none";
+              if (document.querySelector("img[src*='arrow-lef']")) document.querySelector("img[src*='arrow-lef']").parentNode.remove();
+            }
+          }
+          break;
+      }
+    }
 
        class WanderingElement {
 
