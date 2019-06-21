@@ -642,10 +642,9 @@
                inputCheckBoxSearch.checked = false;
                inputCheckBoxSearch.dispatchEvent(new Event("change"));
               });
-            } else {
-              if (document.querySelector("img[src*='arrow-lef']")) document.querySelector("img[src*='arrow-lef']").parentNode.remove();
             }
           } else {
+            if (document.querySelector("img[src*='arrow-lef']")) document.querySelector("img[src*='arrow-lef']").parentNode.remove();
             inputTextSearch.style.display = "none";
           }
           break;
