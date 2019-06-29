@@ -687,80 +687,80 @@
 
       constructor(el, [elTarget, targetWhere], [elStart, startWhere], mediaQ, plural) {
         if (plural) {
-          this.el = document.querySelectorAll(el);
-          this.holder = [];
+          this._el = document.querySelectorAll(el);
+          this._holder = [];
         } else {
-          this.el = document.querySelector(el);
-          this.holder;
+          this._el = document.querySelector(el);
+          this._holder;
         } 
 
-        this.elTarget = document.querySelector(elTarget);
-        this.targetWhere = targetWhere;
-        this.elStart = document.querySelector(elStart);
-        this.startWhere = startWhere;
-        this.mediaQ = mediaQ;
-        this.plural = plural;
+        this._elTarget = document.querySelector(elTarget);
+        this._targetWhere = targetWhere;
+        this._elStart = document.querySelector(elStart);
+        this._startWhere = startWhere;
+        this._mediaQ = mediaQ;
+        this._plural = plural;
       }
 
       changePos() {
-        if (!this.plural) {
-          if (eval(this.mediaQ)) {
-            this.holder = this.el.parentNode.removeChild(this.el);
+        if (!this._plural) {
+          if (eval(this._mediaQ)) {
+            this._holder = this._el.parentNode.removeChild(this._el);
 
-            switch (this.targetWhere) {
+            switch (this._targetWhere) {
               case "before":
-                this.elTarget.parentNode.insertBefore(this.holder, this.elTarget);
+                this._elTarget.parentNode.insertBefore(this._holder, this._elTarget);
                 break;
               case "after":
-                this.elTarget.parentNode.insertBefore(this.holder, this.elTarget.nextSibling);
+                this._elTarget.parentNode.insertBefore(this._holder, this._elTarget.nextSibling);
                 break;
               case "last":
-                this.elTarget.parentNode.appendChild(this.elTarget);
+                this._elTarget.parentNode.appendChild(this._elTarget);
                 break;
             }
           } else {
-            this.holder = this.el.parentNode.removeChild(this.el);
+            this._holder = this._el.parentNode.removeChild(this._el);
 
-            switch (this.startWhere) {
+            switch (this._startWhere) {
               case "first":
-                this.elStart.insertBefore(this.holder, this.elStart.firstElementChild);
+                this._elStart.insertBefore(this._holder, this._elStart.firstElementChild);
                 break;
               case "second":
-                this.elStart.insertBefore(this.holder, this.elStart.firstElementChild.nextElementSibling);
+                this._elStart.insertBefore(this._holder, this._elStart.firstElementChild.nextElementSibling);
                 break;
               case "last":
-                this.elStart.appendChild(this.holder);
+                this._elStart.appendChild(this._holder);
                 break;
             }
           }
         } else {
-          if (eval(this.mediaQ)) {
-            this.el.forEach(i => this.holder.push(i.parentNode.removeChild(i)));
+          if (eval(this._mediaQ)) {
+            this._el.forEach(i => this._holder.push(i.parentNode.removeChild(i)));
 
-            switch (this.targetWhere) {
+            switch (this._targetWhere) {
               case "before":
-                this.holder.forEach(i => this.elTarget.parentNode.insertBefore(i, this.elTarget));
+                this._holder.forEach(i => this._elTarget.parentNode.insertBefore(i, this._elTarget));
                 break;
               case "after":
-                this.holder.forEach(i => this.elTarget.parentNode.insertBefore(i, this.elTarget.nextSibling));
+                this._holder.forEach(i => this._elTarget.parentNode.insertBefore(i, this._elTarget.nextSibling));
                 break;
               case "last":
-                this.holder.forEach(i => this.elTarget.parentNode.appendChild(this.elTarget));
+                this._holder.forEach(i => this._elTarget.parentNode.appendChild(this._elTarget));
                 break;
             }
           } else {
-            this.el.forEach(i => this.holder.push(i.parentNode.removeChild(i)));
+            this._el.forEach(i => this._holder.push(i.parentNode.removeChild(i)));
 
-            switch (this.startWhere) {
+            switch (this._startWhere) {
               case "first":
-                this.holder.forEach(i => this.elStart.insertBefore(i, this.elStart.firstElementChild));
+                this._holder.forEach(i => this._elStart.insertBefore(i, this._elStart.firstElementChild));
                 break;
               case "second":
-                this.holder.forEach(i => this.elStart.insertBefore(i, this.elStart.firstElementChild.nextElementSibling));
+                this._holder.forEach(i => this._elStart.insertBefore(i, this._elStart.firstElementChild.nextElementSibling));
                 break;
               case "last":
-                this.elStart.appendChild(this.holder);
-                this.holder.forEach(i => this.elStart.appendChild(i));
+                this._elStart.appendChild(this._holder);
+                this._holder.forEach(i => this._elStart.appendChild(i));
                 break;
             }
           }
