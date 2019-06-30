@@ -40,22 +40,22 @@ body {
   text-align: center;
   font: 700 119px Montserrat;
   letter-spacing: -0.062em;
-  color: rgba(0,0,0, 0.15);
+  color: rgba(0, 0, 0, 0.15);
   background-color: white;
   transition: top 1s ease;
 }
 
 ::-webkit-input-placeholder {
-  color:rgba(0,0,0, 0.15);  
+  color: rgba(0, 0, 0, 0.15);
 }
 ::-moz-placeholder {
-  color:rgba(0,0,0, 0.15);         
-}          
+  color: rgba(0, 0, 0, 0.15);
+}
 :-moz-placeholder {
-  color:rgba(0,0,0, 0.15);
-}          
+  color: rgba(0, 0, 0, 0.15);
+}
 :-ms-input-placeholder {
-  color:rgba(0,0,0, 0.15);
+  color: rgba(0, 0, 0, 0.15);
 }
 
 /* -------------------------------------------------------------
@@ -67,7 +67,7 @@ body {
 .strip-top {
   grid-column: 1/4;
   grid-row: 1/2;
-  order:1;
+  order: 1;
   z-index: 5;
   height: 42px;
   width: 100%;
@@ -92,7 +92,8 @@ body {
   justify-content: flex-end;
 }
 
-.content-strip-top span, .content-strip-top a {
+.content-strip-top span,
+.content-strip-top a {
   position: static;
   padding-left: 26px;
   font-weight: 400;
@@ -103,13 +104,13 @@ body {
   color: rgba(153, 153, 153, 0.8);
 }
 
-.content-strip-top a, .content-strip-top label {
+.content-strip-top a,
+.content-strip-top label {
   flex: 0 0 auto;
 }
 
-
 .content-strip-top a:hover {
-  color: rgba(255,255,255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .content-strip-top > span {
@@ -123,7 +124,6 @@ body {
   margin-left: 15px;
   vertical-align: middle;
 }
-
 
 .user-menu {
   position: relative;
@@ -146,7 +146,7 @@ body {
 
 .user-menu > span:last-child {
   padding-right: 14px;
-  color: rgba(255,255,255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .user-menu > input:checked ~ span > img {
@@ -163,7 +163,7 @@ body {
   top: auto;
   bottom: 0;
   left: 0;
-  z-index:-1;
+  z-index: -1;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -221,7 +221,7 @@ body {
 .content-nav > a {
   padding-left: 25px;
   padding-right: 34px;
-  border-right: 1px solid rgba(0,0,0, 0.08);
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
   font-weight: 700;
   font-size: 16px;
   line-height: 70px;
@@ -253,8 +253,8 @@ body {
   align-items: center;
   height: 70px;
   padding: 0 24px;
-  border-right: 1px solid rgba(0,0,0, 0.08);
-  border-left: 1px solid rgba(0,0,0, 0.08);
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -267,7 +267,7 @@ body {
   border-top: 3px solid #ff6600;
 }
 
-.search-btn > input[type = checkbox] {
+.search-btn > input[type="checkbox"] {
   position: absolute;
   top: 0;
   left: 0;
@@ -294,7 +294,7 @@ body {
   align-items: center;
   height: 70px;
   padding: 0 0 0 12px;
-  border-right: 1px solid rgba(0,0,0, 0.08);
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 a.basket-btn:hover {
@@ -311,17 +311,16 @@ a.basket-btn:hover {
 }
 
 .basket-btn img:last-of-type {
-    transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
-.basket-btn span{
+.basket-btn span {
   font-weight: 400;
   font-size: 11px;
   line-height: 20px;
   color: #ffffff;
   transform: translate(calc(-50% - 21px), calc(-50% - 1px));
 }
-
 
 /* -------------------------------------------------------------
                     SECTION WITH BACKGROUND                              
@@ -352,7 +351,7 @@ a.basket-btn:hover {
   mix-blend-mode: screen;
 }
 
-.tagline-header { 
+.tagline-header {
   grid-row: 4/5;
   grid-column: 2/3;
   align-self: end;
@@ -387,7 +386,7 @@ a.basket-btn:hover {
   margin-left: auto;
 }
 
-.sub-discription {  
+.sub-discription {
   grid-row: 5/6;
   grid-column: 2/3;
   align-self: center;
@@ -469,7 +468,7 @@ a.basket-btn:hover {
   width: 4px;
   margin: 2px 0 0 2px;
   border-radius: 50%;
-  background-color: rgba(255,255,255, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .container-radio:hover > span,
@@ -487,7 +486,7 @@ a.basket-btn:hover {
 .promo-ad-wrap {
   grid-row: 8/10;
   grid-column: 2/3;
-  z-index: 0; 
+  z-index: 0;
   display: flex;
 }
 
@@ -502,7 +501,7 @@ a.basket-btn:hover {
 
 .promo-ad-wrap > div:last-child {
   background: url(../images/snickers-nike.jpg);
-}  
+}
 
 .promo-ad-wrap h3 {
   width: 220px;
@@ -514,14 +513,14 @@ a.basket-btn:hover {
 }
 
 .promo-ad-wrap > div:last-child h3 {
-  color: rgba(255,255,255, 0.89);
+  color: rgba(255, 255, 255, 0.89);
 }
 
 .menu-of-ad {
   position: absolute;
   bottom: 35px;
   left: 39px;
-  display:flex;
+  display: flex;
   align-items: flex-end;
 }
 
@@ -536,7 +535,6 @@ a.basket-btn:hover {
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: white;
-
 }
 
 .menu-of-ad img {
@@ -595,7 +593,7 @@ main {
 
 .img-item-1 > div {
   height: 100%;
-  background-color: rgba(0,0,0,0.45);
+  background-color: rgba(0, 0, 0, 0.45);
 }
 
 .img-item-2 {
@@ -751,10 +749,10 @@ main {
   justify-self: center;
   padding: 17px 50px;
   margin-bottom: 2px;
-  border: 2px solid rgba(0,0,0, 0.3);
+  border: 2px solid rgba(0, 0, 0, 0.3);
   font: 700 11px Montserrat, sans-serif;
   letter-spacing: -0.04em;
-  color: rgba(0,0,0, 0.78);
+  color: rgba(0, 0, 0, 0.78);
   text-transform: uppercase;
 }
 
@@ -771,7 +769,7 @@ main {
 .strip-logos-bg {
   grid-row: 15/16;
   grid-column: 1/4;
-  background-color: rgba(0,0,0, 0.08);
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
 .strip-logos-content {
@@ -793,9 +791,9 @@ main {
   opacity: 0.65;
 }
 
-.strip-logos-content img[alt=adidas],
-.strip-logos-content img[alt=puma],
-.strip-logos-content img[alt=nike] {
+.strip-logos-content img[alt="adidas"],
+.strip-logos-content img[alt="puma"],
+.strip-logos-content img[alt="nike"] {
   opacity: 0.4;
 }
 
@@ -821,7 +819,7 @@ main {
 
 .footer-nav {
   grid-row: 16/17;
-  grid-column:2/3;
+  grid-column: 2/3;
   align-self: end;
   display: flex;
   align-items: center;
@@ -866,7 +864,7 @@ main {
 .social > div {
   height: 21px;
   width: calc(50% - 116px);
-  border-top: 1px solid rgba(255,255,255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .social img {
@@ -886,7 +884,7 @@ main {
   font-weight: 400;
   font-size: 10px;
   letter-spacing: -0.014em;
-  color: rgba(255,255,255, 0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* menu btn class for low resolution screens */

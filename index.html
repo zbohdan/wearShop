@@ -81,12 +81,16 @@
     
       <div class="bg-header"></div>
       <img src="assets/images/puma.jpg" class="puma-logo">
-      <div class="tagline-header"><h1>Puma Triple Black Pack</h1></div>
-      <div  class="strips"> 
+      <div class="tagline-header">
+        <h1>Puma Triple Black Pack</h1>
+      </div>
+      <div class="strips">
         <div></div>
         <div></div>
       </div>
-      <div class="sub-discription"><h4>PUMA‘s Disc Blaze and Blaze of Glory sneakers get a reworking.</h4></div>
+      <div class="sub-discription">
+        <h4>PUMA‘s Disc Blaze and Blaze of Glory sneakers get a reworking.</h4>
+      </div>
       <a href="#find-out-more" class="find-out"><span>FIND OUT MORE</span><img src="assets/images/arrow-right.png"></a>
       <div class="bg-changer">
         <label class="container-radio">
@@ -122,11 +126,11 @@
           <div class="menu-of-ad">
             <a href="#shop-collection">
               <span>shop collection</span><!--
-               --><img src="assets/images/arrow-right.png" alt="arrow-right">
+              --><img src="assets/images/arrow-right.png" alt="arrow-right">
             </a>
             <a href="#all-watches">
               <span>all watches</span><!--
-             --><img src="assets/images/arrow-right.png" alt="arrow-right">
+            --><img src="assets/images/arrow-right.png" alt="arrow-right">
             </a>
           </div>
         </div>
@@ -135,7 +139,7 @@
           <div class="menu-of-ad">
             <a href="#view-the-pack">
               <span>view the pack</span><!--
-             --><img src="assets/images/arrow-right.png" alt="arrow-right">
+            --><img src="assets/images/arrow-right.png" alt="arrow-right">
             </a>
           </div>
         </div>
@@ -253,7 +257,7 @@
   </div>
   <script>
     function media(num) {
-      switch(num){
+      switch (num) {
         case 0: return (window.innerWidth >= 1600);
         case 1: return ((window.innerWidth >= 1281) && (window.innerWidth <= 1599));
         case 2: return ((window.innerWidth >= 1025) && (window.innerWidth <= 1280));
@@ -263,7 +267,7 @@
         case 6: return ((window.innerWidth >= 481) && (window.innerWidth <= 767) && window.innerWidth > window.innerHeight); 
         case 7: return ((window.innerWidth >= 320) && (window.innerWidth <= 480)); 
         default: { 
-          for(i = 0; i  <= 7; i++){
+          for (i = 0; i <= 7; i++) {
             if (media(i)) break;
           }
           return i;
@@ -292,12 +296,12 @@
         e = e.target;
 
         bg.style.transition = "background-size 1s ease"
-        bg.style.backgroundImage =  `url(assets/images/puma${e.value}.jpg), url(assets/images/puma${input[inputCheckedPrev].value}.jpg)`;
+        bg.style.backgroundImage = `url(assets/images/puma${e.value}.jpg), url(assets/images/puma${input[inputCheckedPrev].value}.jpg)`;
         bg.style.backgroundSize = "100% 100%, 100% 100%";
         e.checked = true;
 
-        timerId2 = setTimeout(()=>{
-          bg.style.backgroundImage =  `url(assets/images/puma${e.value}.jpg), url(assets/images/puma${e.value}.jpg)`;
+        timerId2 = setTimeout(() => {
+          bg.style.backgroundImage = `url(assets/images/puma${e.value}.jpg), url(assets/images/puma${e.value}.jpg)`;
           bg.style.transition = "none";
           bg.style.backgroundSize = "0% 0%, 100% 100%";
         }, 1000);
@@ -328,7 +332,7 @@
     let labelCheckBox = document.querySelector(".user-menu");
     let inputCheckBox = document.querySelector(".user-menu > input");
     
-    labelCheckBox.addEventListener("mousedown", (e)=> e.preventDefault());
+    labelCheckBox.addEventListener("mousedown", (e) => e.preventDefault());
     labelCheckBox.addEventListener("blur", (e) => inputCheckBox.checked = false, true);
 
     // --------------------------------------------
@@ -349,12 +353,12 @@
     let contentNavA = document.querySelector(".content-nav > a");
 
     function setSpanStyle() {
-      if (!isStyleEqual({el: searchSpan, style: "height"}, {el: contentNavA, style: "lineHeight"})) searchSpan.style.top = "calc((((100vh - 112px)/7) - 77px)/2)"; 
+      if (!isStyleEqual({ el: searchSpan, style: "height" }, { el: contentNavA, style: "lineHeight" })) searchSpan.style.top = "calc((((100vh - 112px)/7) - 77px)/2)";
       else searchSpan.style.top = "0";
     }
 
     function setInputStyle() {
-      if (!isStyleEqual({el: searchSpan, style: "height"}, {el: contentNavA, style: "lineHeight"})) inputTextSearch.style.width = "77px";
+      if (!isStyleEqual({ el: searchSpan, style: "height" }, { el: contentNavA, style: "lineHeight" })) inputTextSearch.style.width = "77px";
       else inputTextSearch.style.width = "calc((100vh - 112px)/7)";
     }
 
@@ -371,8 +375,8 @@
     let searchBtn = document.querySelector(".search-btn");
     let divNavLogos = document.querySelector(".content-nav > div:last-of-type");
     
-    inputCheckBoxSearch.addEventListener("change", (e)=> {
-      switch(media()) {
+    inputCheckBoxSearch.addEventListener("change", (e) => {
+      switch (media()) {
         case 0:
         case 1:
         case 2:
@@ -412,7 +416,7 @@
               }, 1000);
             }, 50);
             
-          } else  {
+          } else {
             inputTextSearch.style.transition = "top 0.5s ease, left 1s ease, width 0.5s ease";
             searchSpan.style.transition = "top 0.5s ease, left 1s ease, width 0.5s ease";
             setInputStyle();
@@ -420,7 +424,7 @@
             let timeToBack;
             let inputWidth = getComputedStyle(inputTextSearch).width;
             let spanWidth = getComputedStyle(searchSpan).width;
-            if  (inputWidth == spanWidth) timeToBack = 0;
+            if (inputWidth == spanWidth) timeToBack = 0;
             else timeToBack = 500;
 
             timerId4 = setTimeout(() => {
@@ -470,7 +474,7 @@
             arrowBg.style.height = "42px";
             arrowBg.style.width = "42px";
             arrowBg.style.position = "fixed";
-            arrowBg.style.top =  "0";
+            arrowBg.style.top = "0";
             arrowBg.style.left = "0";
             arrowBg.style.borderLeft = arrowBg.style.borderBottom = arrowBg.style.borderTop = "1px solid #ff6600";
             arrowBg.style.cursor = "pointer";
@@ -558,7 +562,7 @@
     // --------------------------------------------
 
     function fixElementsStyle() {
-      switch(media()) {
+      switch (media()) {
         case 0:
         case 1:
         case 2:
@@ -589,7 +593,7 @@
           searchSpan.style.backgroundColor = "#f60";
           searchIcon.style.opacity = "1";
           searchIcon.style.filter = "invert(1)";
-         break;
+          break;
         case 4:
           inputTextSearch.style.top = "52px";
           inputTextSearch.style.left = "180px";
@@ -656,7 +660,7 @@
               arrowBg.style.height = "42px";
               arrowBg.style.width = "42px";
               arrowBg.style.position = "fixed";
-              arrowBg.style.top =  "0";
+              arrowBg.style.top = "0";
               arrowBg.style.left = "0";
               arrowBg.style.borderLeft = arrowBg.style.borderBottom = arrowBg.style.borderTop = "1px solid #ff6600";
               arrowBg.style.cursor = "pointer";
@@ -671,8 +675,8 @@
 
               inputTextSearch.focus();
               arrowBg.addEventListener("click", e => {
-               inputCheckBoxSearch.checked = false;
-               inputCheckBoxSearch.dispatchEvent(new Event("change"));
+              inputCheckBoxSearch.checked = false;
+              inputCheckBoxSearch.dispatchEvent(new Event("change"));
               });
             }
           } else {
@@ -773,7 +777,7 @@
     let inputAct = new WanderingElement(".input-search", [".basket-btn", "before"], [".container-search", "last"], "media(3) || media(5) || media(6)");
     let navItems = new WanderingElement(".content-strip-top > a", [".user-menu > div > a:last-of-type", "before"], [".content-strip-top", "second"], "media(6) || media(7) || media(5) & window.innerWidth <= 715", true);
 
-    window.onresize = function(event) {
+    window.onresize = function (event) {
       keyPrev = keyCurrent;
       keyCurrent = media();
       navLogos.changePos();
